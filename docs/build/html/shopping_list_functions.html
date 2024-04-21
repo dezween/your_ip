@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>shopping_list_functions module &mdash; shopping_list_manager 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to shopping_list_manager’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            shopping_list_manager
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">shopping_list_functions module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.accept_thanks"><code class="docutils literal notranslate"><span class="pre">accept_thanks()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.add_item"><code class="docutils literal notranslate"><span class="pre">add_item()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.calculate_total_cost"><code class="docutils literal notranslate"><span class="pre">calculate_total_cost()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.check_item_availability"><code class="docutils literal notranslate"><span class="pre">check_item_availability()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.create_shopping_list"><code class="docutils literal notranslate"><span class="pre">create_shopping_list()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.go_to_checkout"><code class="docutils literal notranslate"><span class="pre">go_to_checkout()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.load_shopping_list"><code class="docutils literal notranslate"><span class="pre">load_shopping_list()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.pack_purchases"><code class="docutils literal notranslate"><span class="pre">pack_purchases()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.pay_for_purchases"><code class="docutils literal notranslate"><span class="pre">pay_for_purchases()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.remove_item"><code class="docutils literal notranslate"><span class="pre">remove_item()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.save_shopping_list"><code class="docutils literal notranslate"><span class="pre">save_shopping_list()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#shopping_list_functions.take_receipt"><code class="docutils literal notranslate"><span class="pre">take_receipt()</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">shopping_list_manager</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">shopping_list_functions module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/shopping_list_functions.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="shopping-list-functions-module">
+<h1>shopping_list_functions module<a class="headerlink" href="#shopping-list-functions-module" title="Link to this heading"></a></h1>
+<p>This module contains a collection of functions designed to manage a shopping list, including creating, adding items, and saving the list to a file.</p>
+<dl class="py function" id="module-shopping_list_functions">
+<dt class="sig sig-object py" id="shopping_list_functions.accept_thanks">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">accept_thanks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">customer_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">time_of_day</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'morning'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.accept_thanks" title="Link to this definition"></a></dt>
+<dd><p>Personalizes thanks based on the customer and time of day.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>customer_name</strong> (<em>str</em>) – The name of the customer.</p></li>
+<li><p><strong>time_of_day</strong> (<em>str</em>) – The time of day (‘morning’, ‘evening’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A personalized thank you message.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.add_item">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">add_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shopping_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quantity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.add_item" title="Link to this definition"></a></dt>
+<dd><p>Adds an item and its quantity to the shopping list, supporting both list and dict formats.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shopping_list</strong> (<em>list</em><em> or </em><em>dict</em>) – The shopping list to which the item will be added.</p></li>
+<li><p><strong>item</strong> (<em>str</em>) – The item to add to the shopping list.</p></li>
+<li><p><strong>quantity</strong> (<em>int</em>) – The quantity of the item to add (default is 1).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The updated shopping list and a message indicating the item was added.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.calculate_total_cost">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">calculate_total_cost</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shopping_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tax_rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.07</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">discount</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">promo_code</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.calculate_total_cost" title="Link to this definition"></a></dt>
+<dd><p>Calculates the total cost of the shopping list including tax, discount, and optional promo codes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shopping_list</strong> (<em>dict</em>) – The shopping list with items and quantities.</p></li>
+<li><p><strong>tax_rate</strong> (<em>float</em>) – Tax rate to apply to the subtotal.</p></li>
+<li><p><strong>discount</strong> (<em>float</em>) – Flat discount amount to apply.</p></li>
+<li><p><strong>promo_code</strong> (<em>str</em><em>, </em><em>optional</em>) – Promo code that might apply additional discounts.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total cost and a detailed breakdown of the calculation.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.check_item_availability">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">check_item_availability</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">{}</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.check_item_availability" title="Link to this definition"></a></dt>
+<dd><p>Checks item availability using a cache to reduce load on database or API.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>item</strong> (<em>str</em>) – The item to check availability for.</p></li>
+<li><p><strong>cache</strong> (<em>dict</em><em>, </em><em>optional</em>) – A cache to store previous availability checks.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A boolean indicating if the item is available and a message about the check.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.create_shopping_list">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">create_shopping_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'manual'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.create_shopping_list" title="Link to this definition"></a></dt>
+<dd><p>Creates a shopping list from various sources.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>str</em>) – The source from which to create the list. Options are ‘manual’, ‘database’, or ‘api’.</p></li>
+<li><p><strong>data</strong> (<em>list</em><em> or </em><em>dict</em><em>, </em><em>optional</em>) – Predefined data to load as the shopping list, used when source is ‘database’ or ‘api’.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing the shopping list and a message about how the list was created.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.go_to_checkout">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">go_to_checkout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">queue_length</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_time</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.go_to_checkout" title="Link to this definition"></a></dt>
+<dd><p>Estimates wait time at checkout based on queue length and current time factors.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>queue_length</strong> (<em>int</em>) – The number of people in line at checkout.</p></li>
+<li><p><strong>current_time</strong> (<em>str</em>) – Current part of the day (‘morning’, ‘lunch’, ‘evening’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Estimated wait time in minutes and a message describing the wait time.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.load_shopping_list">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">load_shopping_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.load_shopping_list" title="Link to this definition"></a></dt>
+<dd><p>Loads a shopping list from a specified file using Python’s eval() function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> (<em>str</em>) – The path to the file from which the shopping list is to be loaded.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The shopping list loaded from the file. The type depends on the content of the file.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list or dict</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>FileNotFoundError</strong> – If the specified file does not exist.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function uses eval(), which can run arbitrary Python code. Only use it with trusted files.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.pack_purchases">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">pack_purchases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pack_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'paper'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.pack_purchases" title="Link to this definition"></a></dt>
+<dd><p>Packs purchases into specified types of bags.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>pack_type</strong> (<em>str</em>) – The type of packing material (‘paper’, ‘plastic’, ‘eco’).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A message describing how the purchases were packed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.pay_for_purchases">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">pay_for_purchases</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">amount</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">payment_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'cash'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.pay_for_purchases" title="Link to this definition"></a></dt>
+<dd><p>Processes payment and verifies transaction success.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>amount</strong> (<em>float</em>) – The amount to be paid.</p></li>
+<li><p><strong>payment_type</strong> (<em>str</em>) – Method of payment (e.g., ‘cash’, ‘credit_card’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None if transaction fails, or the amount paid and a success message.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.remove_item">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">remove_item</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shopping_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.remove_item" title="Link to this definition"></a></dt>
+<dd><p>Removes an item from the shopping list. Supports removing multiple items if a list of items is provided.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shopping_list</strong> (<em>dict</em>) – The shopping list from which the item will be removed.</p></li>
+<li><p><strong>item</strong> (<em>str</em><em> or </em><em>list</em>) – The item or list of items to remove.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The updated shopping list and a message indicating the items were removed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.save_shopping_list">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">save_shopping_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">shopping_list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.save_shopping_list" title="Link to this definition"></a></dt>
+<dd><p>Saves the shopping list to a specified file in a string representation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>shopping_list</strong> (<em>list</em><em> or </em><em>dict</em>) – The shopping list to be saved. It can be any serializable structure.</p></li>
+<li><p><strong>filename</strong> (<em>str</em>) – The path to the file where the shopping list will be saved.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Side Effects:</dt><dd><p>Writes to a file, potentially overwriting existing content without warning.</p>
+</dd>
+</dl>
+<p class="rubric">Example</p>
+<p>save_shopping_list([‘apples’, ‘bananas’], ‘list.txt’)  # Saves the list to ‘list.txt’</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="shopping_list_functions.take_receipt">
+<span class="sig-prename descclassname"><span class="pre">shopping_list_functions.</span></span><span class="sig-name descname"><span class="pre">take_receipt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">email</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">receipt_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'paper'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#shopping_list_functions.take_receipt" title="Link to this definition"></a></dt>
+<dd><p>Issues a receipt, optionally by email.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>email</strong> (<em>str</em><em>, </em><em>optional</em>) – The email address to send an electronic receipt to.</p></li>
+<li><p><strong>receipt_type</strong> (<em>str</em>) – The type of receipt to issue (‘paper’, ‘email’).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A message indicating how the receipt was issued.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to shopping_list_manager’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, dezween.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
